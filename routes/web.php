@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\User\DashboardUserController;
+use App\Http\Controllers\User\LoginUserController;
+use App\Http\Controllers\User\RegisterUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/apps-user/dashboard',[DashboardUserController::class,'index']);
+
+Route::get('apps-user/auth',[LoginUserController::class,'index'])->name('login');
+Route::get('apps-user/logout',[LoginUserController::class,'logout'])->name('logout');
+Route::post('apps-user/auth',[LoginUserController::class,'proses'])->name('proses-login-user');
+
+Route::get('apps-user/register',[RegisterUserController::class,'register']);
+Route::post('apps-user/register',[RegisterUserController::class,'proses_register'])->name('proses-register-user');
