@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class RegisterAdminController extends Controller
 {
+
+  public function __construct()
+  {
+     $this->middleware('auth:admin');
+  }
     public function register_admin ()
     {
       return View('Admin.register');
@@ -32,6 +37,22 @@ class RegisterAdminController extends Controller
              'password'=>Hash::make(request()->password),
             ]);
     
-            return redirect('apps-admin/register')->with('status','Account Berhasil Di Register');
+            return redirect('/apps-admin/list-account')->with('status','Account Berhasil Di Buat');
+    }
+
+    public function list ()
+    {
+      $datas=Admin::latest()->get();
+      return View('Admin.list',compact('datas'));
+    }
+
+
+    public function update($id)
+    {
+      Admin::find($id)->update([
+        'role'=>request()->role,
+       ]);
+
+       return redirect('/apps-admin/list-account')->with('status','Role Berhasil Di Update');
     }
 }

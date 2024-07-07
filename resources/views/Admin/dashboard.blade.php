@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-</head>
-<body>
-    <h1>Testing</h1>
+@extends('Components_Admin.Layout')
+@section('title','Dashboard')
+@section('main')
+    
+<div class="pagetitle">
+  <h1>Halaman Dashboard</h1>
+  <nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/apps-admin/dashboard">Dashboard</a></li>
+      <li class="breadcrumb-item">Halaman Dashboard</li>
+    </ol>
+  </nav>
+</div><!-- End Page Title -->
 
-    <a href="{{route('logout-admin')}}">Logout</a>
-</body>
-</html>
+<section class="section">
+ 
+
+</section>
+@endsection

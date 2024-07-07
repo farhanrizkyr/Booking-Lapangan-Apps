@@ -36,4 +36,6 @@ Route::get('apps-user/register',[RegisterUserController::class,'register']);
 Route::post('apps-user/register',[RegisterUserController::class,'proses_register'])->name('proses-register-user');
 
 Route::get('apps-admin/register',[RegisterAdminController::class,'register_admin']);
+Route::get('apps-admin/list-account',[RegisterAdminController::class,'list']);
+Route::post('apps-admin/update-role/{id}',[RegisterAdminController::class,'update']);
 Route::post('apps-admin/register',[RegisterAdminController::class,'proses_register_admin'])->name('proses-register-admin');
