@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardAdminController;
+use App\Http\Controllers\Admin\LapanganFutsalController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
@@ -40,3 +41,8 @@ Route::get('apps-admin/list-account',[RegisterAdminController::class,'list']);
 Route::delete('apps-admin/delete/{id}',[RegisterAdminController::class,'delete']);
 Route::post('apps-admin/update-role/{id}',[RegisterAdminController::class,'update']);
 Route::post('apps-admin/register',[RegisterAdminController::class,'proses_register_admin'])->name('proses-register-admin');
+
+Route::get('apps-admin/lapangan-futsal/list',[LapanganFutsalController::class,'index']);
+Route::get('apps-admin/tambah-lapangan-futsal',[LapanganFutsalController::class,'create']);
+Route::post('apps-admin/upload-lapangan-futsal',[LapanganFutsalController::class,'store']);
+Route::delete('apps-admin/hapus-lapangan-futsal/{id}',[LapanganFutsalController::class,'destroy']);
