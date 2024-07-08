@@ -7,6 +7,14 @@
       </a>
     </li><!-- End Dashboard Nav -->
 
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="/apps-admin/lapangan-futsal/list">    
+        <i class="bi bi-clipboard-fill"></i>
+        <span> Lapangan Futsal</span>
+      </a>
+    </li><!-- End Lapangan Nav -->
+
+
   
     <li class="nav-item">
       <a class="nav-link collapsed" href="/apps-admin/list-account">
