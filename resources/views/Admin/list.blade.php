@@ -1,5 +1,5 @@
 @extends('Components_Admin.Layout')
-@section('title',' List Account Admi')
+@section('title',' List Account Admin')
 @section('main')
     
 <div class="pagetitle">
@@ -49,6 +49,7 @@
                 <td>{{$data->username}}</td>
                 <td>
                     <a href="#" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#role/{{$data->id}}"><i class="bi bi-pencil-fill"></i> Edit</a>
+                    <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash-fill"></i> Delete</a>
                 </td>
             </tr>
         @endforeach
@@ -85,6 +86,32 @@
       </div>
     </div>
   </div>
+ @endforeach
+
+
+ @foreach ($datas as $data)
+     <!-- Modal -->
+<div class="modal fade" id="delete/{{$data->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi Hapus</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/apps-admin/delete/{{$data->id}}" method="post">
+        @csrf
+        @method('delete')
+      <div class="modal-body">
+       <p class="bold">Apakah Ingin Menghapus User Dengan Nama {{$data->name}}  ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-octagon-fill"></i> Close</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-trash"></i> Delete</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
  @endforeach
 </section>
 @endsection

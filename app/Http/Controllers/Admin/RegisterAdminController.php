@@ -55,4 +55,13 @@ class RegisterAdminController extends Controller
 
        return redirect('/apps-admin/list-account')->with('status','Role Berhasil Di Update');
     }
+
+
+    public function delete($id)
+    {
+      $data=Admin::find($id);
+      $data->delete();
+      return redirect('/apps-admin/list-account')->with('status',' Data User Berhasil Di Hapus');
+
+    }
 }
