@@ -26,7 +26,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama Lapangan</th>
-                 <th> Upload</th>
+                 <th>Upload</th>
                 <th>Gambar</th>
                 <th>Jenis Rumput</th>
                 <th>Descripsi</th>
