@@ -46,3 +46,5 @@ Route::get('apps-admin/lapangan-futsal/list',[LapanganFutsalController::class,'i
 Route::get('apps-admin/tambah-lapangan-futsal',[LapanganFutsalController::class,'create']);
 Route::post('apps-admin/upload-lapangan-futsal',[LapanganFutsalController::class,'store']);
 Route::delete('apps-admin/hapus-lapangan-futsal/{id}',[LapanganFutsalController::class,'destroy']);
+Route::get('apps-admin/ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'edit']);
+Route::post('apps-admin/proses-ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'update']);

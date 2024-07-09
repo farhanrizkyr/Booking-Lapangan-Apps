@@ -17,6 +17,13 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 @endif
+
+@if (Session::get('gagal'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Gagal !</strong> {{Session::get('gagal')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
 <a href="/apps-admin/tambah-lapangan-futsal/" class="btn btn-primary mb-3">
    <i class="bi bi-plus-circle"></i> Tambah Lapangan Futsal</a>
 <section class="section">
@@ -52,6 +59,7 @@
                  
              </td>
              <td>
+                   <a class="btn btn-warning btn-sm" href="/apps-admin/ubah-data-lapangan-futsal/{{$data->id}}"><i class="bi bi-pencil-square"></i> Edit</a>
                   <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash"></i> Delete</a>
              </td>
             </tr>
