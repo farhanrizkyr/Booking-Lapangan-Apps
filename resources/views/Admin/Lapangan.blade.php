@@ -59,7 +59,7 @@
                  
              </td>
              <td>
-                   <a class="btn btn-warning btn-sm" href="/apps-admin/ubah-data-lapangan-futsal/{{$data->id}}"><i class="bi bi-pencil-square"></i> Edit</a>
+                   <a class="btn btn-warning" href="/apps-admin/ubah-data-lapangan-futsal/{{$data->id}}"><i class="bi bi-pencil-square"></i> Edit</a>
                   <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash"></i> Delete</a>
              </td>
             </tr>

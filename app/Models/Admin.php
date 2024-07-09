@@ -20,6 +20,8 @@ class Admin extends Authenticatable
     protected $guarded=['id'];
     protected $guard = 'admin';
 
+    const  ROLE_ADMIN = '0';
+
     /**
      * The attributes that should be hidden for serialization.
      *
