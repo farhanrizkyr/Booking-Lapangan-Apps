@@ -25,6 +25,14 @@
     </div>
     
     <div class="grup">
+        <label for="">Harga Lapangan</label>
+        <input type="integer" name="harga" class="form-control">
+        @error('harga')
+            <p class="text-danger">{{$message}}</p>
+        @enderror
+    </div>
+    
+    <div class="grup">
         <label for="">Gambar Lapangan</label>
         <input type="file" name="gambar" class="form-control">
         @error('gambar')

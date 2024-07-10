@@ -37,6 +37,7 @@ class LapanganFutsalController extends Controller
     {
         $request->validate([
          'nama_lapangan'=>'required',
+         'harga'=>'required|integer',
          'gambar'=>'required|mimes:jpg,png,jpeg',
          'jenis_rumput'=>'required',
          'desc'=>'required',
@@ -45,6 +46,8 @@ class LapanganFutsalController extends Controller
     
        [
         'nama_lapangan.required'=>'Wajib Di isi',
+        'harga.required'=>'Wajib Di isi',
+        'harga.integer'=>'Wajib Angka',
         'gambar.required'=>'Wajib Di isi',
         'gambar.mimes'=>'Gambar Wajib JPG,PNG,JPEG',
         'jenis_rumput.required'=>'Wajib Di isi',
@@ -58,6 +61,7 @@ class LapanganFutsalController extends Controller
 
           LapanganFutsal::create([
           'nama_lapangan'=>$request->nama_lapangan,
+          'harga'=>$request->harga,
           'jenis_rumput'=>$request->jenis_rumput,
           'desc'=>$request->desc,
           'gambar'=>$filename,
@@ -95,6 +99,7 @@ class LapanganFutsalController extends Controller
         
         $request->validate([
             'nama_lapangan'=>'required',
+            'harga'=>'required|integer',
             'gambar'=>'mimes:jpg,png,jpeg',
             'jenis_rumput'=>'required',
             'desc'=>'required',
@@ -103,6 +108,8 @@ class LapanganFutsalController extends Controller
        
           [
            'nama_lapangan.required'=>'Wajib Di isi',
+           'harga.required'=>'Wajib Di isi',
+           'harga.integer'=>'Wajib Angka',
            'gambar.required'=>'Wajib Di isi',
            'gambar.mimes'=>'Gambar Wajib JPG,PNG,JPEG',
            'jenis_rumput.required'=>'Wajib Di isi',
@@ -116,6 +123,7 @@ class LapanganFutsalController extends Controller
 
           LapanganFutsal::find($id)->update([
           'nama_lapangan'=>$request->nama_lapangan,
+          'harga'=>$request->harga,
           'jenis_rumput'=>$request->jenis_rumput,
           'desc'=>$request->desc,
           'gambar'=>$filename,
@@ -130,6 +138,7 @@ class LapanganFutsalController extends Controller
           else{
             LapanganFutsal::find($id)->update([
                 'nama_lapangan'=>$request->nama_lapangan,
+                'harga'=>$request->harga,
                 'jenis_rumput'=>$request->jenis_rumput,
                 'desc'=>$request->desc,
                

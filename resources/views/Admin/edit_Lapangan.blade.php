@@ -25,6 +25,15 @@
             <p class="text-danger">{{$message}}</p>
         @enderror
     </div>
+
+    <div class="grup">
+
+        <label for="">Harga Lapangan</label>
+        <input type="integer" name="harga" class="form-control"  value="{{$data->harga}}">
+        @error('harga')
+            <p class="text-danger">{{$message}}</p>
+        @enderror
+    </div>
     
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="grup">

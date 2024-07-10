@@ -33,6 +33,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama Lapangan</th>
+                <th>Harga</th>
                  <th>Upload</th>
                 <th>Gambar</th>
                 <th>Jenis Rumput</th>
@@ -45,6 +46,7 @@
             <tr>
              <th>{{$loop->iteration}}</th>
              <td>{{$data->nama_lapangan}}</td>
+             <td>{{$data->harga}}</td>
              <td>{{$data->created_at->isoformat('dddd D, MMMM Y')}}</td>
              <td><img width="100px;" src="{{url('Gambar_Lapangan',$data->gambar)}}" alt=""></td>
              <td>{{$data->jenis_rumput}}</td>

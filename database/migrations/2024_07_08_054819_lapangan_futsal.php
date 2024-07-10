@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('lapangan_futsals', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lapangan');
+            $table->integer('harga');
             $table->string('gambar');
             $table->string('jenis_rumput');
             $table->longText('desc');
