@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\LapanganFutsalController;
 use App\Http\Controllers\Admin\LoginAdminController;
+use App\Http\Controllers\Admin\PengaturanAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
 use App\Http\Controllers\User\LoginUserController;
@@ -48,3 +49,6 @@ Route::post('apps-admin/upload-lapangan-futsal',[LapanganFutsalController::class
 Route::delete('apps-admin/hapus-lapangan-futsal/{id}',[LapanganFutsalController::class,'destroy']);
 Route::get('apps-admin/ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'edit']);
 Route::post('apps-admin/proses-ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'update']);
+
+Route::get('apps-user/my-profile',[PengaturanAdminController::class,'index']);
+Route::post('apps-user/ubah-pengaturan/{id}',[PengaturanAdminController::class,'update']);
