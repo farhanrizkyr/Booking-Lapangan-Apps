@@ -16,9 +16,14 @@
     <section class="section profile">
         <div class="row">
           <div class="col-xl-4">
-  
-            <div class="card">
+           <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+                @if (Session::get('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Berhasil !</strong> {{Session::get('status')}}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
   
                 <img src="{{Auth::user()->avatar()}}" alt="Profile" class="rounded-circle">
                 <h2>{{Auth::user()->name}}</h2>
@@ -109,7 +114,7 @@
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
   
                     <!-- Profile Edit Form -->
-                    <form method="POST" enctype="multipart/form-data" action="/apps-user/ubah-pengaturan/{{Auth::user()->id}}">
+                    <form method="POST" enctype="multipart/form-data" action="/apps-admin/ubah-pengaturan/{{Auth::user()->id}}">
                         @csrf
                          @if (Auth::user()->avatar)
                              <input type="hidden" name="avatar_lama" value="{{Auth::user()->avatar}}">

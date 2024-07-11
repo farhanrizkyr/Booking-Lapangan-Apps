@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 class PengaturanAdminController extends Controller
 {
     /**
@@ -97,7 +97,7 @@ class PengaturanAdminController extends Controller
                 ]);
         }
 
-        return redirect('/apps-user/my-profile');
+        return redirect('/apps-admin/my-profile')->with('status','Profile Berhasil Di update');
     }
 
     /**

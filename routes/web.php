@@ -50,5 +50,5 @@ Route::delete('apps-admin/hapus-lapangan-futsal/{id}',[LapanganFutsalController:
 Route::get('apps-admin/ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'edit']);
 Route::post('apps-admin/proses-ubah-data-lapangan-futsal/{id}',[LapanganFutsalController::class,'update']);
 
-Route::get('apps-user/my-profile',[PengaturanAdminController::class,'index']);
-Route::post('apps-user/ubah-pengaturan/{id}',[PengaturanAdminController::class,'update']);
+Route::get('apps-admin/my-profile',[PengaturanAdminController::class,'index']);
+Route::post('apps-admin/ubah-pengaturan/{id}',[PengaturanAdminController::class,'update']);
