@@ -107,6 +107,13 @@
               <hr class="dropdown-divider">
             </li>
 
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/apps-admin/password">
+                <i class="bi bi-key"></i>
+                <span>Password</span>
+              </a>
+            </li>
          
             <li>
               <a class="dropdown-item d-flex align-items-center" href="{{route('logout-admin')}}">

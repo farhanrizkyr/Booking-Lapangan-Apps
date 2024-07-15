@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\LapanganFutsalController;
 use App\Http\Controllers\Admin\LoginAdminController;
+use App\Http\Controllers\Admin\PasswordAdminController;
 use App\Http\Controllers\Admin\PengaturanAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
@@ -52,3 +53,6 @@ Route::post('apps-admin/proses-ubah-data-lapangan-futsal/{id}',[LapanganFutsalCo
 
 Route::get('apps-admin/my-profile',[PengaturanAdminController::class,'index']);
 Route::post('apps-admin/ubah-pengaturan/{id}',[PengaturanAdminController::class,'update']);
+
+Route::get('apps-admin/password',[PasswordAdminController::class,'password']);
+Route::post('apps-admin/password',[PasswordAdminController::class,'update'])->name('update-pw-admin');
