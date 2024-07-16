@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PengaturanAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
 use App\Http\Controllers\User\LoginUserController;
+use App\Http\Controllers\User\PasswordUserController;
 use App\Http\Controllers\User\PengaturanUserController;
 use App\Http\Controllers\User\RegisterUserController;
 use Illuminate\Support\Facades\Route;
@@ -60,3 +61,6 @@ Route::post('apps-user/update-user-account/{id}',[PengaturanUserController::clas
 
 Route::get('apps-admin/password',[PasswordAdminController::class,'password']);
 Route::post('apps-admin/password',[PasswordAdminController::class,'update'])->name('update-pw-admin');
+
+Route::get('apps-user/ubah-password',[PasswordUserController::class,'password']);
+Route::post('apps-user/ubah-password',[PasswordUserController::class,'update'])->name('update-pw-user');

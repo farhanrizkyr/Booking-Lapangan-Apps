@@ -77,6 +77,13 @@
                 <span>My Profile</span>
               </a>
             </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="/apps-user/ubah-password">
+                <i class="bi bi-key-fill"></i>
+                <span>Ubah Password</span>
+              </a>
+            </li>
     
             <li>
               <hr class="dropdown-divider">
@@ -113,14 +120,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Farhan Rizky Ramadhan</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://github.com/farhanrizkyr">Farhan Rizky Ramadhan</a>
     </div>
   </footer><!-- End Footer -->
 
