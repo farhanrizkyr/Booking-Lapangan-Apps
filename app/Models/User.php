@@ -40,8 +40,8 @@ class User extends Authenticatable
     public function avatar()
    {
       if (!$this->avatar) {
-        return asset('Avatar/avatar.png');
+        return asset('AvatarUser/avatar.png');
       }
-      return asset('Avatar/'.$this->avatar);
+      return asset('AvatarUser/'.$this->avatar);
    }
 }

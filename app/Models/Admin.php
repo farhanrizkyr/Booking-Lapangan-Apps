@@ -40,12 +40,11 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
     public function avatar()
-   {
-      if (!$this->avatar) {
-        return asset('Avatar/avatar.png');
-      }
-      return asset('Avatar/'.$this->avatar);
-   }
+    {
+       if (!$this->avatar) {
+         return asset('Avatar/avatar.png');
+       }
+       return asset('Avatar/'.$this->avatar);
+    }
 }
