@@ -11,6 +11,16 @@
     </ol>
   </nav>
 </div><!-- End Page Title -->
+<<<<<<< HEAD
+=======
+@if (Session::get('status'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Berhasil !</strong> {{Session::get('status')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
+
+>>>>>>> 693a9ca069fefbc5aafca4ef55e3b99ac744d648
 @if (Session::get('gagal'))
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>Gagal !</strong> {{Session::get('gagal')}}
