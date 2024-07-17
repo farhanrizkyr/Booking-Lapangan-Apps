@@ -14,12 +14,12 @@
     <li class="nav-heading">Menu Grup</li> 
     <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-list"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        <i class="bi bi-list"></i><span>Lapangan Futsal</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-          <a href="tables-general.html">
-            <i class="bi bi-circle"></i><span>General Tables</span>
+          <a href="/apps-user/list-lapangan">
+            <i class="bi bi-circle"></i><span>List Lapangan Futsal</span>
           </a>
         </li>
         <li>
