@@ -61,6 +61,39 @@
 <button class="btn btn-primary mt-3">Update</button>
 </form>
 </div> 
+ <div class="card" style="padding:22px;">
+  <form action="{{route('update-pw-user')}}" method="post">
+    @csrf
+  <div class="grup">
+<div class="grup"><label for="">Password Lama</label>
+<input type="password" name="password_lama" class="form-control">
+@error('password_lama')
+    <p class="text-danger">{{$message}}</p>
+@enderror
+</div>
+
+<div class="grup">
+  <div class="grup"><label for="">Password baru</label>
+  <input type="password" name="password_baru" class="form-control">
+  @error('password_baru')
+    <p class="text-danger">{{$message}}</p>
+@enderror
+  </div>
+
+  <div class="grup">
+    <div class="grup"><label for="">Konfirmasi Password baru</label>
+    <input type="password" name="password_baru1" class="form-control">
+    @error('password_baru1')
+    <p class="text-danger">{{$message}}</p>
+@enderror
+    </div>
+
+
+
+
+<button class="btn btn-primary mt-3">Update</button>
+</form>
+</div> 
 
 </section>
 @endsection
