@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PengaturanAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
 use App\Http\Controllers\User\ListLapanganController;
+use App\Http\Controllers\User\ListLapanganController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\PasswordUserController;
 use App\Http\Controllers\User\PengaturanUserController;

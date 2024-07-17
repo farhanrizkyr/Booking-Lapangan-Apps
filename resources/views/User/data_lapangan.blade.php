@@ -11,6 +11,7 @@
     </ol>
   </nav>
 </div><!-- End Page Title -->
+
 @if (Session::get('gagal'))
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>Gagal !</strong> {{Session::get('gagal')}}

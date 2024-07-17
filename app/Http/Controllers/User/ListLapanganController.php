@@ -17,6 +17,7 @@ class ListLapanganController extends Controller
     $lapangans=LapanganFutsal::latest()->get();
     return view('User.data_lapangan',compact('lapangans'));
     }
+<<<<<<< HEAD
 
 
     function booking($id){
@@ -27,4 +28,6 @@ class ListLapanganController extends Controller
         
         return view('User.booking',compact('booking'));
     }
+=======
+>>>>>>> 693a9ca069fefbc5aafca4ef55e3b99ac744d648
 }
