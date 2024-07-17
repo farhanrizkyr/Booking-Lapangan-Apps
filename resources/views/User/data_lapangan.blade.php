@@ -14,7 +14,7 @@
 
 @if (Session::get('gagal'))
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>Gagal !</strong> {{Session::get('gagal')}}
+    <strong>Gagal !!</strong> {{Session::get('gagal')}}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 @endif
