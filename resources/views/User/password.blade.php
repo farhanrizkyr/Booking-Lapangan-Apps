@@ -55,12 +55,9 @@
 @enderror
     </div>
 
-
-
-
 <button class="btn btn-primary mt-3">Update</button>
 </form>
 </div> 
-
+ 
 </section>
 @endsection
