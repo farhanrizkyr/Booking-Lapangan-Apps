@@ -64,6 +64,9 @@ class ListBookingLapanganController extends Controller
     {
         $data=BookingLapangan::find($id);
         $data->delete();
+        if ($data->bukti_bayar<> '') {
+          unlink(public_path('Bukti_Transfers').'/'.$data->bukti_bayar);
+        }
         return redirect('/apps-user/list-booking-lapangan')->with('status','Data Lapangan Berhasil Di Hapus');
     }
 }

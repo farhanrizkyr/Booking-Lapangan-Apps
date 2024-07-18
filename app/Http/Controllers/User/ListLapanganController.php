@@ -49,7 +49,7 @@ class ListLapanganController extends Controller
       ]);
      }
 
-     return redirect('apps-user/list-lapangan');
+     return redirect('apps-user/list-lapangan')->with('berhasil','Lapangan Berhasil Di Booking');
     }
 
 }

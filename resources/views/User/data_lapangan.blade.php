@@ -19,6 +19,13 @@
   </div>
 @endif
 
+@if (Session::get('berhasil'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Berhasil !!</strong> {{Session::get('berhasil')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
+
 <section class="section">
  <div class="table-responsive">
     <table class="table  datatable">
