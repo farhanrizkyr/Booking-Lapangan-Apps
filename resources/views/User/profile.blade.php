@@ -64,7 +64,7 @@
                     <h5 class="card-title">About</h5>
                     <p class="small fst-italic">
                         @if (strlen(Auth::user()->bio)>250)
-                          !! substr (Auth::user()->bio,0,250) !! <a href="#" data-bs-toggle="modal" data-bs-target="#bio">Lanjutkan...</a>
+                          {!! substr (Auth::user()->bio,0,250) !!} <a href="#" data-bs-toggle="modal" data-bs-target="#bio">Lanjutkan...</a>
                           @else
                             {!! Auth::user()->bio !!}
                           
