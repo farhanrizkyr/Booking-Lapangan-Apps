@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\BookingLapangan;
 use App\Models\LapanganFutsal;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class ListLapanganController extends Controller
 {
@@ -17,7 +18,6 @@ class ListLapanganController extends Controller
     $lapangans=LapanganFutsal::latest()->get();
     return view('User.data_lapangan',compact('lapangans'));
     }
-<<<<<<< HEAD
 
 
     function booking($id){
@@ -28,6 +28,28 @@ class ListLapanganController extends Controller
         
         return view('User.booking',compact('booking'));
     }
-=======
->>>>>>> 693a9ca069fefbc5aafca4ef55e3b99ac744d648
+
+    function proses_booking($id){
+     request()->validate([
+     'jam_awal'=>'required|unique:booking_lapangans',
+     'jam_akhir'=>'required|unique:booking_lapangans',
+     'bukti_bayar'=>'required',
+     ]);
+
+     if (request()->file('bukti_bayar')) {
+       $file=request()->file('bukti_bayar');
+       $filename=time().'.'.$file->getClientOriginalExtension();
+       $file->move(public_path('Bukti_Transfers'),$filename);
+        BookingLapangan::create([
+        'jam_awal'=>request()->jam_awal,
+        'user_id'=>Auth::user()->id,
+        'lapangan_futsal_id'=>request()->nama_lapangan,
+        'jam_akhir'=>request()->jam_akhir,
+        'bukti_bayar'=>$filename,
+      ]);
+     }
+
+     return redirect('apps-user/list-lapangan');
+    }
+
 }

@@ -1,5 +1,7 @@
 @extends('Components.Layout')
-@section('title','Booking Lapangan')
+@section('title')
+Booking- {{$booking->nama_lapangan}}
+@endsection
 @section('main')
     
 <div class="pagetitle">
@@ -23,49 +25,75 @@
                  <td>:</td>
                 <td>{{$booking->nama_lapangan}}</td>
               </tr>
-
+               <tr>
               <td> Harga  Lapangan </td>
               <td>:</td>
              <td>{{$booking->harga}}</td>
            </tr>
-
+           <tr>
            <td> Gambar Lapangan </td>
              <td>:</td>
             <td><img style="width:30%;" src="{{url('Gambar_lapangan',$booking->gambar)}}" alt=""></td>
           </tr>
 
+          <tr>
           <td> Jenis  Rumput Lapangan </td>
              <td>:</td>
              <td>{{$booking->jenis_rumput}}</td>
           </tr>
-
+          <tr>
           <td> Description Lapangan </td>
           <td>:</td>
          <td>{!!$booking->desc!!}</td>
+          </tr>
             </thead>
         </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
-
-
  </div>
+
+
+<hr>
+ <h4>Booking Lapangan Futsal</h4>
+
+ <div class="card text-center">
+  <div class="card-header">
+  <i class="bi bi-clipboard-check-fill"></i>  Booking Lapangan Futsal
+  </div>
+  <div class="card-body">
+  <form action="/apps-user/proses-daftar/{{$booking->id}}" enctype="multipart/form-data" method="post">
+    @csrf
+    <div class="grup">
+      <input type="hidden" name="nama_lapangan" value="{{$booking->id}}">
+      <label for="">Jam Awal</label>
+      <input type="datetime-local" name="jam_awal" class="form-control">
+      @error('jam_awal')
+          <p class="text-danger">{{$message}}</p>
+      @enderror
+    </div>
+
+    <div class="grup">
+      <label for="">Jam Akhir</label>
+      <input type="datetime-local" name="jam_akhir" class="form-control">
+      @error('jam_akhir')
+          <p class="text-danger">{{$message}}</p>
+      @enderror
+    </div>
+
+      <div class="grup">
+        <label for="">Bukti Pembayaran </label>
+        <input type="file" name="bukti_bayar" class="form-control">
+        @error('bukti_bayar')
+            <p class="text-danger">{{$message}}</p>
+        @enderror
+    </div>
+    <button class="btn btn-primary mt-2"><i class="bi bi-floppy"></i> Booking</button>
+  </form>
+
+  </div>
+  <div class="card-footer text-body-secondary">
+Form Booking Lapangan Futsal
+  </div>
+</div>
 </section>
 @endsection

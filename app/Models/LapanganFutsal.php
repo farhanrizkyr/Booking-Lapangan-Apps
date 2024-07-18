@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class LapanganFutsal extends Model
 {
       protected $guarded=['id'];
+
+
+      public function bookings()
+      {
+            return $this->hasMany(BookingLapangan::class);
+      }
 }

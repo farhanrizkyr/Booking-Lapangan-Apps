@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PasswordAdminController;
 use App\Http\Controllers\Admin\PengaturanAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\DashboardUserController;
+use App\Http\Controllers\User\ListBookingLapanganController;
 use App\Http\Controllers\User\ListLapanganController;
 use App\Http\Controllers\User\LoginUserController;
 use App\Http\Controllers\User\PasswordUserController;
@@ -68,3 +69,7 @@ Route::post('apps-user/ubah-password',[PasswordUserController::class,'update'])-
 
 Route::get('apps-user/list-lapangan',[ListLapanganController::class,'list_lapangan']);
 Route::get('apps-user/booking-lapangan-futsal/{id}',[ListLapanganController::class,'booking']);
+Route::post('apps-user/proses-daftar/{id}',[ListLapanganController::class,'proses_booking']);
+
+Route::get('apps-user/list-booking-lapangan',[ListBookingLapanganController::class,'index']);
+Route::delete('apps-user/delete/{id}',[ListBookingLapanganController::class,'destroy']);

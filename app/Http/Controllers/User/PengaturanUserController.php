@@ -94,6 +94,7 @@ class PengaturanUserController extends Controller
     else {
         User::find($id)->update([
             'name'=>request()->name,
+            
             'username'=>request()->username,
             'tempat'=>request()->tempat,
             'tl'=>request()->tl,
