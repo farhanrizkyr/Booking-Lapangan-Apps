@@ -1,5 +1,5 @@
 @extends('Components_Admin.Layout')
-@section('title','Tambah Edit Lapangan Futsal')
+@section('title','Edit Lapangan Futsal')
 @section('main')
     
 <div class="pagetitle">

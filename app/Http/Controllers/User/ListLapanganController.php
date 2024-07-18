@@ -31,6 +31,8 @@ class ListLapanganController extends Controller
 
     function proses_booking($id){
      request()->validate([
+     'tanggal_awal'=>'required|unique:booking_lapangans',
+     'tanggal_akhir'=>'required|unique:booking_lapangans',
      'jam_awal'=>'required|unique:booking_lapangans',
      'jam_akhir'=>'required|unique:booking_lapangans',
      'bukti_bayar'=>'required',
@@ -42,9 +44,11 @@ class ListLapanganController extends Controller
        $file->move(public_path('Bukti_Transfers'),$filename);
         BookingLapangan::create([
         'jam_awal'=>request()->jam_awal,
+        'tanggal_awal'=>request()->tanggal_awal,
         'user_id'=>Auth::user()->id,
         'lapangan_futsal_id'=>request()->nama_lapangan,
         'jam_akhir'=>request()->jam_akhir,
+        'tanggal_akhir'=>request()->tanggal_akhir,
         'bukti_bayar'=>$filename,
       ]);
      }

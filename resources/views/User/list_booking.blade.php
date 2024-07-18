@@ -27,6 +27,10 @@
     <tr>
         <th>No</th>
         <th>Nama Lapangan</th>
+        <th>Tanggal Awal</th>
+        <th>Jam Awal</th>
+        <th>Tanggal Selesai</th>
+        <th>Jam Selesai</th>
         <th>Status</th>
         <th>Harga</th>
         <th>Aksi</th>
@@ -38,6 +42,10 @@
         <tr>
           <th>{{$loop->iteration}}</th>
           <td>{{$data->jadwal->nama_lapangan}}</td>
+          <td>{{\Carbon\carbon::parse($data->tanggal_awal)->isoformat('dddd D MMMM Y')}}</td>
+          <td>{{$data->jam_awal}}</td>
+          <td>{{\Carbon\carbon::parse($data->tanggal_akhir)->isoformat('dddd D MMMM Y')}}</td>
+          <td>{{$data->jam_akhir}}</td>
           <td>
             @if ($data->status==0)
                  <span class="badge bg-danger">Belum Lunas</span>

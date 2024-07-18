@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('booking_lapangans', function (Blueprint $table) {
             $table->id();
-            $table->date('jam_awal');
-            $table->date('jam_akhir');
-            $table->string('bayar')->default('0');
+            $table->string('tanggal_awal');
+            $table->string('jam_awal');
+            $table->string('jam_akhir');
+            $table->string('tanggal_akhir');
+            $table->string('bukti_bayar')->default('0');
             $table->string('status')->default('0');
             $table->ForeignIdFor(LapanganFutsal::class);
             $table->ForeignIdFor(User::class);

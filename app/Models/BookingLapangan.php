@@ -11,6 +11,8 @@ class BookingLapangan extends Model
       'id',
       'user_id',
       'jam_awal',
+      'tanggal_awal',
+      'tanggal_akhir',
       'jam_akhir',
       'bukti_bayar',
       'lapangan_futsal_id',

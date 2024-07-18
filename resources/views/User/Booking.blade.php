@@ -64,17 +64,34 @@ Booking- {{$booking->nama_lapangan}}
   <form action="/apps-user/proses-daftar/{{$booking->id}}" enctype="multipart/form-data" method="post">
     @csrf
     <div class="grup">
-      <input type="hidden" name="nama_lapangan" value="{{$booking->id}}">
+
+      <div class="grup">
+        <input type="hidden" name="nama_lapangan" value="{{$booking->id}}">
+        <label for="">Tanggal Awal</label>
+        <input type="date" name="tanggal_awal" class="form-control">
+        @error('tanggal_awal')
+            <p class="text-danger">{{$message}}</p>
+        @enderror
+      </div>
+
       <label for="">Jam Awal</label>
-      <input type="datetime-local" name="jam_awal" class="form-control">
+      <input type="time" name="jam_awal" class="form-control">
       @error('jam_awal')
           <p class="text-danger">{{$message}}</p>
       @enderror
     </div>
 
     <div class="grup">
+      <label for="">Tanggal Akhir</label>
+      <input type="date" name="tanggal_akhir" class="form-control">
+      @error('tanggal_akhir')
+          <p class="text-danger">{{$message}}</p>
+      @enderror
+    </div>
+
+    <div class="grup">
       <label for="">Jam Akhir</label>
-      <input type="datetime-local" name="jam_akhir" class="form-control">
+      <input type="time" name="jam_akhir" class="form-control">
       @error('jam_akhir')
           <p class="text-danger">{{$message}}</p>
       @enderror
