@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\LapanganFutsalController;
+use App\Http\Controllers\Admin\ListBookingLapanganUserController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\PasswordAdminController;
 use App\Http\Controllers\Admin\PengaturanAdminController;
@@ -75,3 +76,7 @@ Route::get('apps-user/list-booking-lapangan',[ListBookingLapanganController::cla
 Route::delete('apps-user/delete/{id}',[ListBookingLapanganController::class,'destroy']);
 Route::get('apps-user/history-booking-lapangan-futsal',[ListBookingLapanganController::class,'history']);
 Route::delete('apps-user/delete-history/{id}',[ListBookingLapanganController::class,'destroy_history']);
+
+Route::get('apps-admin/list-booking-lapangan-user',[ListBookingLapanganUserController::class,'index']);
+Route::get('apps-admin/list-history-booking-lapangan-user',[ListBookingLapanganUserController::class,'history']);
+Route::post('list-booking-lapangan-user/update-status/{id}',[ListBookingLapanganUserController::class,'update']);

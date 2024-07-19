@@ -32,17 +32,17 @@
     
     <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-list"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        <i class="bi bi-list"></i><span>List Booking Lapangan Futsal</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-          <a href="tables-general.html">
-            <i class="bi bi-circle"></i><span>General Tables</span>
+          <a href="/apps-admin/list-booking-lapangan-user">
+            <i class="bi bi-circle"></i><span>List Booking Lapangan</span>
           </a>
         </li>
         <li>
-          <a href="tables-data.html">
-            <i class="bi bi-circle"></i><span>Data Tables</span>
+          <a href="/apps-admin/list-history-booking-lapangan-user">
+            <i class="bi bi-circle"></i><span>List History Booking Lapangan</span>
           </a>
         </li>
       </ul>

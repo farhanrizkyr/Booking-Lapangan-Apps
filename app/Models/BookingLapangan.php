@@ -11,6 +11,7 @@ class BookingLapangan extends Model
       'id',
       'user_id',
       'jam_awal',
+      'status',
       'tanggal_awal',
       'tanggal_akhir',
       'jam_akhir',

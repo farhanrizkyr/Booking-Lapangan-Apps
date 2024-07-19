@@ -31,8 +31,8 @@ class ListLapanganController extends Controller
 
     function proses_booking($id){
      request()->validate([
-     'tanggal_awal'=>'required|unique:booking_lapangans',
-     'tanggal_akhir'=>'required|unique:booking_lapangans',
+     'tanggal_awal'=>'required',
+     'tanggal_akhir'=>'required',
      'jam_awal'=>'required|unique:booking_lapangans',
      'jam_akhir'=>'required|unique:booking_lapangans',
      'bukti_bayar'=>'required',
