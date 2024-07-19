@@ -62,7 +62,14 @@
              </td>
              <td>
                    <a class="btn btn-warning" href="/apps-admin/ubah-data-lapangan-futsal/{{$data->id}}"><i class="bi bi-pencil-square"></i> Edit</a>
-                  <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash"></i> Delete</a>
+                 @if ($data->bookings->count()<1)
+                 <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash"></i> Delete</a>
+                 @endif
+
+                
+                 @if ($data->bookings->count()>0)
+                 <a href="#" class="btn btn-secondary btn-sm disabled" data-bs-toggle="modal" data-bs-target="#delete/{{$data->id}}"><i class="bi bi-trash"></i> Delete</a>
+                 @endif
              </td>
             </tr>
             @endforeach
