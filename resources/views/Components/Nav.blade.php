@@ -27,6 +27,12 @@
             <i class="bi bi-circle"></i><span>List Booking Lapangan Futsal </span>
           </a>
         </li>
+
+        <li>
+          <a href="/apps-user/history-booking-lapangan-futsal">
+            <i class="bi bi-circle"></i><span>history Booking Lapangan Futsal </span>
+          </a>
+        </li>
       </ul>
     </li><!-- End Tables Nav -->
 

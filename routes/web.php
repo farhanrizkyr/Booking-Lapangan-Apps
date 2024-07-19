@@ -73,3 +73,5 @@ Route::post('apps-user/proses-daftar/{id}',[ListLapanganController::class,'prose
 
 Route::get('apps-user/list-booking-lapangan',[ListBookingLapanganController::class,'index']);
 Route::delete('apps-user/delete/{id}',[ListBookingLapanganController::class,'destroy']);
+Route::get('apps-user/history-booking-lapangan-futsal',[ListBookingLapanganController::class,'history']);
+Route::delete('apps-user/delete-history/{id}',[ListBookingLapanganController::class,'destroy_history']);

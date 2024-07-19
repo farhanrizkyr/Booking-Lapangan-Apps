@@ -74,4 +74,22 @@ class ListBookingLapanganController extends Controller
         }
         return redirect('/apps-user/list-booking-lapangan')->with('status','Data Lapangan Berhasil Di Hapus');
     }
+
+    public function history()
+    {
+        $datas=BookingLapangan::where('user_id',auth()->user()->id)->where('status',1)->get();
+        return view('User.list_history',compact('datas'));
+    }
+
+    public function destroy_history(string $id)
+    {
+        $data=BookingLapangan::find($id);
+        $data->delete();
+        if ($data->bukti_bayar<> '') {
+          unlink(public_path('Bukti_Transfers').'/'.$data->bukti_bayar);
+        }
+        return redirect('/apps-user/history-booking-lapangan-futsal')->with('status','Data Lapangan Berhasil Di Hapus');
+    }
+
+
 }
