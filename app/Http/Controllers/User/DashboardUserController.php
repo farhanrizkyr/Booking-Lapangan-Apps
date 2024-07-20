@@ -16,8 +16,8 @@ class DashboardUserController extends Controller
     }
   public function index ()
   {
-     $app=BookingLapangan::where('status',1)->count();
-    $not=BookingLapangan::where('status',0)->count();
+     $app=BookingLapangan::where('status',1)->where('user_id',auth()->user()->id)->count();
+    $not=BookingLapangan::where('status',0)->where('user_id',auth()->user()->id)->count();
     $lap=LapanganFutsal::count();
     return View('User.dashboard',compact('lap','not','app'));
   }

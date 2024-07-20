@@ -1,13 +1,13 @@
 @extends('Components_Admin.Layout')
-@section('title','List Booking Lapangan User')
+@section('title','List History Booking Lapangan User')
 @section('main')
     
 <div class="pagetitle">
-  <h1>Halaman List Booking Lapangan User</h1>
+  <h1>Halaman List History Booking Lapangan User</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/apps-admin/dashboard">Dashboard</a></li>
-      <li class="breadcrumb-item">Halaman List Booking Lapangan User</li>
+      <li class="breadcrumb-item">Halaman List History Booking Lapangan User</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->

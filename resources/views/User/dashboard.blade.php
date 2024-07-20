@@ -21,7 +21,7 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">{{$not}} List Booking</h5>
-      <a href="apps-user/list-booking-lapangan" class="btn btn-primary"><i class="bi bi-arrow-right"></i> Go somewhere</a>
+      <a href="/apps-user/list-booking-lapangan" class="btn btn-primary"><i class="bi bi-arrow-right"></i> Go somewhere</a>
     </div>
   </div>
 </div>
@@ -46,7 +46,7 @@
     <div class="card-body">
       <h5 class="card-title">{{$app}} Jumlah History Booking</h5>
     
-      <a href="/history-booking-lapangan-futsal" class="btn btn-primary"><i class="bi bi-arrow-right"></i>  Go somewhere</a>
+      <a href="/apps-user/history-booking-lapangan-futsal" class="btn btn-primary"><i class="bi bi-arrow-right"></i>  Go somewhere</a>
     </div>
   </div>
 </div>
